@@ -1,0 +1,1 @@
+insert into employee values('testing','sudharsan','sudharsanss',1234.00,'2001-10-11');
