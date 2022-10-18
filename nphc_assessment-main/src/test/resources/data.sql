@@ -1,0 +1,1 @@
+insert into employee values('emp0023','sudharsan','sudharsanss',1234.00,'2001-10-11');
