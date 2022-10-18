@@ -99,7 +99,8 @@ public class CSVController {
 
 	@GetMapping
 	public ResponseEntity<EmployeeResponseList<?>> search(@RequestParam("search") String search,
-			@RequestParam("pagesize")  Integer pageSize, @RequestParam("pageindex") Integer pageIndex) {
+														  @RequestParam(value = "pagesize", required = false, defaultValue = "50")  Integer pageSize,
+														  @RequestParam(value = "pageindex", required = false, defaultValue = "0") Integer pageIndex) {
 		try {
 			List<EmployeeDomain> mainObjList = fileService.search(search, pageSize, pageIndex);
 			if (mainObjList.isEmpty()) {
